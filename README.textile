@@ -17,7 +17,7 @@ Install the Rich-pluralization gem:
   sudo gem install rich_pluralization
 </pre>
 
-Add rich_pluralization in environment.rb as a gem dependency:
+Add rich_pluralization in @environment.rb@ as a gem dependency:
 
 <pre>
   config.gem "rich_pluralization"
@@ -29,6 +29,33 @@ Install the Rich-pluralization plugin:
 
 <pre>
   ./script/plugin install git://github.com/archan937/rich_pluralization.git 
+</pre>
+
+Install i18n if you haven't already:
+
+<pre>
+  sudo gem install i18n
+</pre>
+
+h3. Testing Rich-pluralization out-of-the-box
+
+Set the default locale to @:nl@ in @environment.rb@:
+
+<pre>
+  config.i18n.default_locale = :nl
+</pre>
+
+Run the Rails console:
+
+<pre>
+  ./script/console
+</pre>
+
+Start pluralizing in Dutch:
+
+<pre>
+  >> "Academicus".pl
+  => "Academici"
 </pre>
 
 h2. Usage
