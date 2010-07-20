@@ -1,0 +1,143 @@
+
+h1. Rich-pluralization
+
+Enrichments (e9s) module for localized pluralization
+
+h2. Introduction
+
+Rich-pluralization is a module of E9s ("http://github.com/archan937/e9s":http://github.com/archan937/e9s) which provides localized pluralization in combination with i18n. Doing this enables you to only translate words in singular form as the module pluralizes the translation for you.
+
+h2. Installation
+
+h3. Using Rich-pluralization as gem
+
+Install the Rich-pluralization gem:
+
+<pre>
+  sudo gem install rich_pluralization
+</pre>
+
+Add rich_pluralization in environment.rb as a gem dependency:
+
+<pre>
+  config.gem "rich_pluralization"
+</pre>
+
+h3. Using Rich-pluralization as plugin
+
+Install the Rich-pluralization plugin:
+
+<pre>
+  ./script/plugin install git://github.com/archan937/rich_pluralization.git 
+</pre>
+
+h2. Usage
+
+Just call the @pl@ method on string or symbols to pluralize.
+
+*Note*: @I18n.locale@ is @:nl@
+
+<pre>
+  >> "brief".pl
+  => "brieven"
+  >> "gebruiker".pl
+  => "gebruikers"
+  >> :museum.pl
+  => "musea"
+  >> "afspraak".pl
+  => "afspraken"
+</pre>
+
+h3. Adding pluralization rules / inflections
+
+Rich-pluralization inflections resembles the inflections of @ActiveSupport::Inflector@. Unfortunately, specifying inflections within @config/initializers/inflections.rb@ influences your Rails application and thus causes great problems.
+
+To specify pluralization rules for different locales. You have to use regular expressions and put them in @config/locales/language.yml@.
+
+*Note*: specified in @config/locales/nl.yml@
+
+<pre>
+--- 
+nl: 
+  
+  e9s:
+    singular:
+      - rule:          en$
+        replacement:   ""
+
+    plural:
+      - rule:          ee$
+        replacement:   eeën
+      
+      - rule:          heid$
+        replacement:   heden
+      
+      - rule:          (c|m|n|t)us$
+        replacement:   \1i
+      
+      - rule:        | abc, acme, acne, (a|ë|i|o|u|y)$
+        replacement:   \1's
+        exceptions:    (ai|eau|ei|li|lieu|ooi|ou|shampoo|spray|vlo)$
+        
+      - rule:          (blad|kind)$
+        replacement:   \1eren
+        exceptions:    (aanrecht|advertentie)blad
+      
+      - rule:          (e|em|el|er|erd|aar|aard|um|eur|foon|oor|ier|en|ie|eau|show|festival|é)$
+        replacement:   \1s
+
+      - rule:        | (a|e|o|u)\1([^aeiou])$
+        replacement:   \1\2en
+        
+      - rule:        | (aï|alia)(s), 
+                       ([^aeiou][aeiou])([^aeiou])$
+        replacement:   \1\2\2en
+        exceptions:    dal, pad, slot, vat, weg, 
+                       (blad|dag|dak|engel|gat|weg)$
+        
+      - rule:          f$
+        replacement:   ven
+
+      - rule:          s$
+        replacement:   zen
+
+      - rule:          $
+        replacement:   en
+    
+    irregular:
+      gelid:           gelederen
+    
+    uncountable:
+      - geld
+      - informatie
+      - rijst
+</pre>
+
+For a complete example, please open "http://github.com/archan937/rich_pluralization/locales/nl.yml":http://github.com/archan937/rich_pluralization/locales/nl.yml which contains Dutch inflections.
+
+h2. Contact me
+
+For support, remarks and requests please mail me at "paul.engel@holder.nl":mailto:paul.engel@holder.nl.
+
+h2. Credit
+
+This Rails gem / plugin depends on:
+
+i18n<br>
+"http://github.com/svenfuchs/i18n":http://github.com/svenfuchs/i18n
+
+h2. ToDo's
+
+* Complete the Dutch inflections
+
+h2. License
+
+Copyright (c) 2010 Paul Engel, released under the MIT license
+
+"http://holder.nl":http://holder.nl - "http://codehero.es":http://codehero.es - "http://gettopup.com":http://gettopup.com - "http://twitter.com/archan937":http://twitter.com/archan937 - "paul.engel@holder.nl":mailto:paul.engel@holder.nl
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
