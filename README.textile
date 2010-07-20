@@ -113,7 +113,7 @@ nl:
       - rijst
 </pre>
 
-For a complete example, please open "http://github.com/archan937/rich_pluralization/locales/nl.yml":http://github.com/archan937/rich_pluralization/locales/nl.yml which contains Dutch inflections.
+For a complete example, please open "http://github.com/archan937/rich_pluralization/blob/master/locales/nl.yml":http://github.com/archan937/rich_pluralization/blob/master/locales/nl.yml which contains Dutch inflections.
 
 h2. Contact me
 
