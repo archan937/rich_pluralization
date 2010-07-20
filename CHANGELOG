@@ -1,5 +1,9 @@
 = Rich-pluralization CHANGELOG
 
+== Version 1.0.1 (July 21, 2010)
+
+* Added String inflection methods
+
 == Version 1.0.0 (July 20, 2010)
 
 * Initial release (extracted Rich-pluralization from E9s)
