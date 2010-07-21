@@ -75,6 +75,10 @@ Just call the @pl@ method on string or symbols to pluralize.
   => "afspraken"
 </pre>
 
+h3. String methods
+
+Rich-pluralization has enriched the String class with several inflection methods such as @upcase_first@, @cp_case@, @upcase_first!@ and @pluralize!@. Please visit "http://github.com/archan937/rich_pluralization/blob/master/lib/rich/pluralization/core/string/inflections.rb":http://github.com/archan937/rich_pluralization/blob/master/lib/rich/pluralization/core/string/inflections.rb to see all the methods.
+
 h3. Adding pluralization rules / inflections
 
 Rich-pluralization inflections resembles the inflections of @ActiveSupport::Inflector@. Unfortunately, specifying inflections within @config/initializers/inflections.rb@ influences your Rails application and thus causes great problems.
