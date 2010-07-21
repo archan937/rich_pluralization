@@ -7,7 +7,9 @@ h2. Introduction
 
 Rich-pluralization is a module of E9s ("http://github.com/archan937/e9s":http://github.com/archan937/e9s) which provides localized pluralization in combination with i18n. Doing this enables you to only translate words in singular form as the module pluralizes the translation for you.
 
-For instance, in the Dutch locale you can do the following:
+h3. Pluralization
+
+As as example, in the Dutch locale you can do the following:
 
 <pre>
   >> "Appendix".pl
@@ -15,6 +17,21 @@ For instance, in the Dutch locale you can do the following:
 </pre>
 
 Dutch pluralization rules are provided along with Rich-pluralization and has a 86% test coverage out of 54977 words which are provided by "INL (Instituut voor Nederlandse Lexicologie)":http://www.inl.nl. Unfortunately we can't distribute the complete list of nouns due to the closed nature of the database.
+
+h3. Inflections
+
+Rich-pluralization preserves the casing in the pluralized result:
+
+<pre>
+  >> "huis".pl
+  => "huizen"
+  >> "Huis".pl
+  => "Huizen"
+  >> "HUIS".pl
+  => "HUIZEN"
+</pre>
+
+*Note*: @I18n.locale@ is @:nl@
 
 h2. Installation
 
