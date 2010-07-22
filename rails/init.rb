@@ -1,1 +1,1 @@
-require "rich/pluralization"
+require "rich_pluralization"
