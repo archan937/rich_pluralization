@@ -2,7 +2,7 @@
 
 == Version 1.0.2 (July 22, 2010)
 
-* Specify the locales with relative paths
+* Specified the locales with relative paths
 * Fixed error during gem initialization
 
 == Version 1.0.1 (July 21, 2010)

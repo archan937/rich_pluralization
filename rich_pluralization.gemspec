@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rich_pluralization}
-  s.version = "1.0.1"
+  s.version = "1.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Paul Engel"]
@@ -24,7 +24,6 @@ Gem::Specification.new do |s|
      "VERSION",
      "init.rb",
      "install.rb",
-     "lib/rich/pluralization.rb",
      "lib/rich/pluralization/core.rb",
      "lib/rich/pluralization/core/string.rb",
      "lib/rich/pluralization/core/string/inflections.rb",
@@ -33,8 +32,10 @@ Gem::Specification.new do |s|
      "lib/rich/pluralization/engine.rb",
      "lib/rich/pluralization/inflector.rb",
      "lib/rich/pluralization/inflector/inflections.rb",
+     "lib/rich_pluralization.rb",
      "locales/nl.yml",
      "rails/init.rb",
+     "rich_pluralization.gemspec",
      "tasks/rich_pluralization_tasks.rake",
      "test/core/string/inflections_test.rb",
      "test/engine_test.rb",
