@@ -10,7 +10,7 @@ module Rich
           class InflectionsTest < ActiveSupport::TestCase
             setup do
               include Setup
-              I18n.locale = ::Rich::Pluralization::Engine.init(self)
+              I18n.locale = Engine.init(self)
             end
         
             test "dutch_pluralizations" do
