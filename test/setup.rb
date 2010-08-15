@@ -5,7 +5,7 @@ module Rich
       module Setup
 
         def self.included(base)
-          require "rich/pluralization"
+          require "rich_pluralization"
         end
 
       end
