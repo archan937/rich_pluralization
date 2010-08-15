@@ -190,6 +190,16 @@ h2. ToDo's
 * Complete the Dutch inflections
 * Most String inflection methods are also defined in rich_i18n (keep it DRY)
 
+h2. E9s
+
+E9s - "http://github.com/archan937/e9s":http://github.com/archan937/e9s
+
+h3. E9s modules
+
+* Rich-CMS - "http://github.com/archan937/rich_cms":http://github.com/archan937/rich_cms
+* Rich-i18n - "http://github.com/archan937/rich_i18n":http://github.com/archan937/rich_i18n
+* Rich-pluralization - "http://github.com/archan937/rich_pluralization":http://github.com/archan937/rich_pluralization
+
 h2. License
 
 Copyright (c) 2010 Paul Engel, released under the MIT license
