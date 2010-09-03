@@ -1,0 +1,44 @@
+--- 
+es: 
+  
+  e9s:
+    plural:
+      - rule:        | ([aeiou]s)$
+        replacement:   \1
+      
+      - rule:        | ([^aeioué])$
+        replacement:   \1es
+
+      - rule:        | á([sn])$
+        replacement:   a\1es
+
+      - rule:        | í([sn])$
+        replacement:   i\1es
+
+      - rule:        | ó([sn])$
+        replacement:   o\1es
+
+      - rule:        | ú([sn])$
+        replacement:   u\1es
+
+      - rule:          z$
+        replacement:   ces
+        
+      - rule:          (es|s)$
+        replacement:   ""
+        
+      - rule:          $
+        replacement:   s
+    
+    irregular:
+      "papá": "papás"
+      "mamá": "mamás"
+      "sofá": "sofás"
+
+# http://gist.github.com/138956  
+# http://www.viget.com/extend/rails-internationalization-and-tu/
+# 
+# inflect.plural(/^(\w+)\s(.+)$/, lambda { |match|
+#                  head, tail = match.split(/\s+/, 2)
+#                  "#{head.pluralize} #{tail}"
+#                })
