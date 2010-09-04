@@ -1,9 +1,10 @@
 = Rich-pluralization CHANGELOG
 
-== Version 1.0.3 (August 15, 2010)
+== Version 1.0.3 (September 4, 2010)
 
 * Specified version (0.3.7) of the i18n gem dependency
 * Corrected Rich-pluralization require statement within test setup
+* Added basic Spanish pluralization rules (for M. Koper & Friends ^^)
 
 == Version 1.0.2 (July 22, 2010)
 

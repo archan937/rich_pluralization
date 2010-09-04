@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Paul Engel"]
-  s.date = %q{2010-08-15}
+  s.date = %q{2010-09-04}
   s.description = %q{Rich-pluralization is a module of E9s (http://github.com/archan937/e9s) which provides localized pluralization in combination with i18n. Doing this enables you to only translate words in singular form as the module pluralizes the translation for you.}
   s.email = %q{paul.engel@holder.nl}
   s.extra_rdoc_files = [
@@ -33,6 +33,7 @@ Gem::Specification.new do |s|
      "lib/rich/pluralization/inflector.rb",
      "lib/rich/pluralization/inflector/inflections.rb",
      "lib/rich_pluralization.rb",
+     "locales/es.yml",
      "locales/nl.yml",
      "rails/init.rb",
      "rich_pluralization.gemspec",
