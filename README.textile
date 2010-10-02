@@ -187,7 +187,7 @@ i18n<br>
 
 h2. ToDo's
 
-* Complete the Dutch inflections
+* Complete the Dutch and Spanish inflections
 * Most String inflection methods are also defined in rich_i18n (keep it DRY)
 
 h2. Enrichments
