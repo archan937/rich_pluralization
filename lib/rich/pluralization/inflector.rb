@@ -14,14 +14,18 @@ module Rich
       end
     
       def singularize(word)
-        inflect :singulars, word
+        in_english? ? word.singularize : inflect(:singulars, word)
       end
     
       def pluralize(word, count = nil)
-        count == 1 ? singularize(word) : inflect(:plurals, word)
+        count == 1 ? singularize(word) : (in_english? ? word.pluralize : inflect(:plurals, word))
       end
     
     private
+    
+      def in_english?
+        I18n.locale.to_s == "en"
+      end
     
       [:singulars, :plurals, :irregulars, :uncountables].each do |type|
         define_method type do
