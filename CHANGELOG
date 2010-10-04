@@ -1,5 +1,9 @@
 = Rich-pluralization CHANGELOG
 
+== Version 1.0.5 (October 4, 2010)
+
+* Fix: Copying letter casing after inflecting in English
+
 == Version 1.0.4 (October 4, 2010)
 
 * Using ActiveSupport::CoreExtensions::String::Inflections.pluralize (and singularize) when current locale is English
