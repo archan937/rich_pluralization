@@ -14,11 +14,11 @@ module Rich
       end
     
       def singularize(word)
-        in_english? ? word.singularize : inflect(:singulars, word)
+        in_english? ? word.singularize.cp_case(word) : inflect(:singulars, word)
       end
     
       def pluralize(word, count = nil)
-        count == 1 ? singularize(word) : (in_english? ? word.pluralize : inflect(:plurals, word))
+        count == 1 ? singularize(word) : (in_english? ? word.pluralize.cp_case(word) : inflect(:plurals, word))
       end
     
     private
