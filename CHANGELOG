@@ -1,5 +1,9 @@
 = Rich-pluralization CHANGELOG
 
+== Version 1.0.4 (October 4, 2010)
+
+* Using ActiveSupport::CoreExtensions::String::Inflections.pluralize (and singularize) when current locale is English
+
 == Version 1.0.3 (September 4, 2010)
 
 * Specified version (0.3.7) of the i18n gem dependency
