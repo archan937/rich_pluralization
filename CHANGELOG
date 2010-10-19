@@ -1,5 +1,11 @@
 = Rich-pluralization CHANGELOG
 
+== Version 1.0.6 (October 19, 2010)
+
+* Changed the i18n gem dependency to '>= 0.3.7'
+* Requiring the inflector and inflections source files manually
+* Correct es.yml (with help of M. Koper)
+
 == Version 1.0.5 (October 4, 2010)
 
 * Fix: Copying letter casing after inflecting in English
