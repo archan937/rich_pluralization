@@ -3,11 +3,8 @@ es:
   
   e9s:
     plural:
-      - rule:        | ([aeiou]s)$
-        replacement:   \1
-      
-      - rule:        | ([^aeioué])$
-        replacement:   \1es
+      - rule:          z$
+        replacement:   ces
 
       - rule:        | á([sn])$
         replacement:   a\1es
@@ -20,12 +17,12 @@ es:
 
       - rule:        | ú([sn])$
         replacement:   u\1es
-
-      - rule:          z$
-        replacement:   ces
         
-      - rule:          (es|s)$
-        replacement:   ""
+      - rule:        | ([aeiou]s)$
+        replacement:   \1
+      
+      - rule:        | ([^aeioué])$
+        replacement:   \1es
         
       - rule:          $
         replacement:   s
