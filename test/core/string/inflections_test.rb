@@ -11,14 +11,14 @@ module Rich
               include Setup
               I18n.locale = Engine.init(Locales::NL)
             end
-          
+
             # test "pl" do
             #   assert true
             # end
           end
         end
-   
-      end 
+
+      end
     end
   end
 end

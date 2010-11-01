@@ -12,7 +12,7 @@ module Rich
               include Setup
               I18n.locale = Engine.init(self)
             end
-        
+
             test "dutch_pluralizations" do
               assert_equal "vinnen"             , "vin".pl
               assert_equal "tassen"             , "tas".pl
@@ -29,7 +29,7 @@ module Rich
               assert_equal "vazen"              , "vaas".pl
               # assert_equal "vragen & antwoorden", "vraag & antwoord".pl
             end
-          
+
             test "wnt_list" do
               if File.exist?(filename = File.join(File.dirname(__FILE__), "words.csv"))
 
@@ -38,21 +38,21 @@ module Rich
                 end
 
                 # passed, counted = 0, 0
-                # 
+                #
                 # CSV.open(File.join(File.dirname(__FILE__), "words.csv"), "r", ",") do |word|
                 #   unless word[1].match(/NULL/)
                 #     counted = counted + 1
                 #     passed  = passed + 1 if word[1] == word[0].pl
                 #   end
                 # end
-                # 
+                #
                 # puts "Dutch word pluralization test results:"
                 # puts "Passed #{passed} of #{counted}"
-              
+
               end
             end
           end
-            
+
         end
       end
     end

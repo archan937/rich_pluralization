@@ -54,7 +54,7 @@ h3. Using Rich-pluralization as plugin
 Install the Rich-pluralization plugin:
 
 <pre>
-  ./script/plugin install git://github.com/archan937/rich_pluralization.git 
+  ./script/plugin install git://github.com/archan937/rich_pluralization.git
 </pre>
 
 Install i18n if you haven't already:
@@ -114,9 +114,9 @@ To specify pluralization rules for different locales. You have to use regular ex
 *Note*: specified in @config/locales/nl.yml@
 
 <pre>
---- 
-nl: 
-  
+---
+nl:
+
   e9s:
     singular:
       - rule:          en$
@@ -125,33 +125,33 @@ nl:
     plural:
       - rule:          ee$
         replacement:   eeën
-      
+
       - rule:          heid$
         replacement:   heden
-      
+
       - rule:          (c|m|n|t)us$
         replacement:   \1i
-      
+
       - rule:        | abc, acme, acne, (a|ë|i|o|u|y)$
         replacement:   \1's
         exceptions:    (ai|eau|ei|li|lieu|ooi|ou|shampoo|spray|vlo)$
-        
+
       - rule:          (blad|kind)$
         replacement:   \1eren
         exceptions:    (aanrecht|advertentie)blad
-      
+
       - rule:          (e|em|el|er|erd|aar|aard|um|eur|foon|oor|ier|en|ie|eau|show|festival|é)$
         replacement:   \1s
 
       - rule:        | (a|e|o|u)\1([^aeiou])$
         replacement:   \1\2en
-        
-      - rule:        | (aï|alia)(s), 
+
+      - rule:        | (aï|alia)(s),
                        ([^aeiou][aeiou])([^aeiou])$
         replacement:   \1\2\2en
-        exceptions:    dal, pad, slot, vat, weg, 
+        exceptions:    dal, pad, slot, vat, weg,
                        (blad|dag|dak|engel|gat|weg)$
-        
+
       - rule:          f$
         replacement:   ven
 
@@ -160,10 +160,10 @@ nl:
 
       - rule:          $
         replacement:   en
-    
+
     irregular:
       gelid:           gelederen
-    
+
     uncountable:
       - geld
       - informatie

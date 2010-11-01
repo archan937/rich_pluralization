@@ -1,6 +1,6 @@
---- 
-es: 
-  
+---
+es:
+
   e9s:
     plural:
       - rule:          z$
@@ -17,24 +17,24 @@ es:
 
       - rule:        | ú([sn])$
         replacement:   u\1es
-        
+
       - rule:        | ([aeiou]s)$
         replacement:   \1
-      
+
       - rule:        | ([^aeioué])$
         replacement:   \1es
-        
+
       - rule:          $
         replacement:   s
-    
+
     irregular:
       "papá": "papás"
       "mamá": "mamás"
       "sofá": "sofás"
 
-# http://gist.github.com/138956  
+# http://gist.github.com/138956
 # http://www.viget.com/extend/rails-internationalization-and-tu/
-# 
+#
 # inflect.plural(/^(\w+)\s(.+)$/, lambda { |match|
 #                  head, tail = match.split(/\s+/, 2)
 #                  "#{head.pluralize} #{tail}"

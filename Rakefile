@@ -11,7 +11,7 @@ begin
     gemspec.email       = "paul.engel@holder.nl"
     gemspec.homepage    = "http://github.com/archan937/rich_pluralization"
     gemspec.author      = "Paul Engel"
-    
+
     gemspec.add_dependency "i18n", ">= 0.3.7"
   end
   Jeweler::GemcutterTasks.new
