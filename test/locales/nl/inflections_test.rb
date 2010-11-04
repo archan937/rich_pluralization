@@ -12,7 +12,7 @@ module Locales
         assert_equal I18n.locale, :nl
       end
 
-      test "dutch_pluralizations" do
+      test "pluralizations" do
         assert_equal "vinnen"             , "vin".pl
         assert_equal "tassen"             , "tas".pl
         assert_equal "telefoons"          , "telefoon".pl
@@ -29,7 +29,7 @@ module Locales
         # assert_equal "vragen & antwoorden", "vraag & antwoord".pl
       end
 
-      test "wnt_list" do
+      test "WNT list" do
         if File.exist? filename = File.join(File.dirname(__FILE__), "words.csv")
 
           return
