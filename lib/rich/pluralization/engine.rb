@@ -6,9 +6,11 @@ module Rich
 
       def init(test_class = nil)
         if test_class
-          test_locale = test_class.name.match(/(Rich\:\:Pluralization\:\:Test\:\:Locales\:\:)(\w+)/).captures[1].downcase.to_sym
+          # test_class.downcase.to_sym
+          #Locales::NL
+          # test_locale = test_class.name.match(/(Locales\:\:)(\w+)/).captures[1].downcase.to_sym
 
-          I18n.load_path  =    [File.join(File.dirname(__FILE__), "..", "..", "..", "locales", "#{test_locale}.yml")]
+          I18n.load_path  =    [File.join(File.dirname(__FILE__), "..", "..", "..", "locales", "#{test_class}.yml")]
         else
           I18n.load_path += Dir[File.join(File.dirname(__FILE__), "..", "..", "..", "locales", "*.yml")]
         end
@@ -32,7 +34,7 @@ module Rich
 
         I18n.locale = initial_locale
 
-        test_locale
+        test_class
       end
 
     end

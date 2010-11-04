@@ -1,16 +1,16 @@
 require File.expand_path(File.join(File.dirname(__FILE__), "..", "..", "test_helper.rb"))
 
-class InflectionsTest < Test::Unit::TestCase
+class InflectionsTest < ActiveSupport::TestCase
 
-  def setup
-    I18n.locale = Engine.init(Locales::NL)
+  setup do
+    I18n.locale = Engine.init("nl")
   end
   
-  def test_the_truth
+  test "the truth" do
     assert true
   end
   
-  def test_if_setup_works
+  test "set nl locale" do
     assert_equal I18n.locale, :nl
   end
 end
