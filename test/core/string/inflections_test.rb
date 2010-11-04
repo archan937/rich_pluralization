@@ -14,10 +14,10 @@ module Core
 
       test "upcasing the first character" do
         assert_equal ""         , ""         .upcase_first
-        assert_equal "Test"     , "TEST"     .upcase_first
+        assert_equal "TeST"     , "teST"     .upcase_first
         assert_equal "Test"     , "test"     .upcase_first
         assert_equal "Test test", "test test".upcase_first
-        assert_equal "Test test", "Test Test".upcase_first
+        assert_equal "Test Test", "Test Test".upcase_first
       end
 
     end

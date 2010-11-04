@@ -10,7 +10,7 @@ module Rich
           def upcase_first
             empty? ?
               self :
-              self[0].chr.capitalize + self[1, size].downcase
+              self[0].chr.capitalize + self[1, size]
           end
 
           def cp_case(s)
