@@ -4,7 +4,7 @@ require "csv"
 
 class InflectionsLocalesTest < ActiveSupport::TestCase
   setup do
-    I18n.locale = Engine.init(self)
+    I18n.locale = Engine.init("nl")
   end
 
   test "dutch_pluralizations" do

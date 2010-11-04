@@ -13,4 +13,6 @@ class InflectionsTest < ActiveSupport::TestCase
   test "set nl locale" do
     assert_equal I18n.locale, :nl
   end
+  
+
 end

@@ -6,10 +6,6 @@ module Rich
 
       def init(test_class = nil)
         if test_class
-          # test_class.downcase.to_sym
-          #Locales::NL
-          # test_locale = test_class.name.match(/(Locales\:\:)(\w+)/).captures[1].downcase.to_sym
-
           I18n.load_path  =    [File.join(File.dirname(__FILE__), "..", "..", "..", "locales", "#{test_class}.yml")]
         else
           I18n.load_path += Dir[File.join(File.dirname(__FILE__), "..", "..", "..", "locales", "*.yml")]
