@@ -185,6 +185,10 @@ This Rails gem / plugin depends on:
 i18n<br>
 "http://github.com/svenfuchs/i18n":http://github.com/svenfuchs/i18n
 
+h2. Contributors
+
+Wilco van Duinkerken - "@wvduinkerken":http://twitter.com/wvduinkerken - "http://holder.nl":http://holder.nl
+
 h2. ToDo's
 
 * Complete the Dutch and Spanish inflections
