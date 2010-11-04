@@ -1,4 +1,4 @@
-
+require "singleton"
 require "rich/pluralization/core"
 require "rich/pluralization/inflector"
 require "rich/pluralization/inflector/inflections"
