@@ -4,15 +4,15 @@ module Rich
     module Engine
       extend self
 
-      def init(test_class = nil)
-        if test_class
-          I18n.load_path  =    [File.join(File.dirname(__FILE__), "..", "..", "..", "locales", "#{test_class}.yml")]
+      def init(test_locale = nil)
+        if test_locale
+          I18n.load_path  =    [File.join(File.dirname(__FILE__), "..", "..", "..", "locales", "#{test_locale}.yml")]
         else
           I18n.load_path += Dir[File.join(File.dirname(__FILE__), "..", "..", "..", "locales", "*.yml")]
         end
 
         I18n.backend.reload!
-        Rich::Pluralization::Inflector.inflections.reset_attrs if test_class
+        Rich::Pluralization::Inflector.inflections.reset_attrs if test_locale
 
         initial_locale = I18n.locale
 
@@ -30,7 +30,7 @@ module Rich
 
         I18n.locale = initial_locale
 
-        test_class
+        test_locale
       end
 
     end
