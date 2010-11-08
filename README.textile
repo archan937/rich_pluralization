@@ -35,32 +35,44 @@ Rich-pluralization preserves the casing in the pluralized result:
 
 h2. Installation
 
-h3. Using Rich-pluralization as gem
+h3. Using Rich-pluralization as gem in Rails 3
 
-Install the Rich-pluralization gem:
+Add Rich-pluralization in @Gemfile@ as a gem dependency:
 
 <pre>
-  sudo gem install rich_pluralization
+  gem "rich_pluralization"
 </pre>
 
-Add rich_pluralization in @environment.rb@ as a gem dependency:
+Run the following in your console to install with Bundler:
+
+<pre>
+  sudo bundle install
+</pre>
+
+h3. Using Rich-pluralization as gem in Rails 2
+
+Add Rich-pluralization in @environment.rb@ as a gem dependency:
 
 <pre>
   config.gem "rich_pluralization"
 </pre>
 
-h3. Using Rich-pluralization as plugin
-
-Install the Rich-pluralization plugin:
+Run the following in your console:
 
 <pre>
-  ./script/plugin install git://github.com/archan937/rich_pluralization.git
+  sudo rake gems:install
 </pre>
 
-Install i18n if you haven't already:
+h3. Using Rich-pluralization as plugin in Rails 3
 
 <pre>
-  sudo gem install i18n
+  rails plugin install git://github.com/archan937/rich_pluralization.git
+</pre>
+
+h3. Using Rich-pluralization as plugin in Rails 2
+
+<pre>
+  script/plugin install git://github.com/archan937/rich_pluralization.git
 </pre>
 
 h3. Testing Rich-pluralization out-of-the-box
