@@ -77,13 +77,15 @@ h3. Using Rich-pluralization as plugin in Rails 2
 
 h3. Testing Rich-pluralization out-of-the-box
 
-Set the default locale to @:nl@ in @environment.rb@:
+Run the Rails console:
+
+h4. In Rails 3
 
 <pre>
-  config.i18n.default_locale = :nl
+  rails c
 </pre>
 
-Run the Rails console:
+h4. In Rails 2
 
 <pre>
   ./script/console
@@ -92,6 +94,8 @@ Run the Rails console:
 Start pluralizing in Dutch:
 
 <pre>
+  >> I18n.locale = :nl
+  => :nl
   >> "Academicus".pl
   => "Academici"
 </pre>
