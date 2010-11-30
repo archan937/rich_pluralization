@@ -9,7 +9,7 @@ module Locales
           I18n.locale = Engine.init :nl
         end
 
-        should "have to correct locale set" do
+        should "have the correct locale set" do
           assert_equal I18n.locale, :nl
         end
 
