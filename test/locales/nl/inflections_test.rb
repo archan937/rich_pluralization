@@ -4,7 +4,7 @@ module Locales
   module NL
     class InflectionsTest < ActiveSupport::TestCase
 
-      context "A String instance in Dutch singular form" do
+      context "A String within the Dutch locale" do
         setup do
           I18n.locale = Engine.init :nl
         end
@@ -13,7 +13,7 @@ module Locales
           assert_equal I18n.locale, :nl
         end
 
-        should "pluralize correctly" do
+        should "pluralize with Dutch inflections" do
           assert_equal "vinnen"             , "vin".pl
           assert_equal "tassen"             , "tas".pl
           assert_equal "telefoons"          , "telefoon".pl

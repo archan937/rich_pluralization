@@ -4,14 +4,22 @@ module Core
   module String
     class InflectionsTest < ActiveSupport::TestCase
 
-      context "A String instance" do
-        should "upcase the first character only" do
-          assert_equal ""         , ""         .upcase_first
-          assert_equal "TeST"     , "teST"     .upcase_first
-          assert_equal "Test"     , "test"     .upcase_first
-          assert_equal "Test test", "test test".upcase_first
-          assert_equal "Test Test", "Test Test".upcase_first
-        end
+      test "upcase_first" do
+        assert_equal      "",      "".upcase_first
+        assert_equal "Value", "value".upcase_first
+        assert_equal "VALUE", "vALUE".upcase_first
+      end
+
+      test "cp_case" do
+        assert_equal                  "VALUE",                  "value".cp_case("KEY")
+        assert_equal                  "value",                  "VALUE".cp_case("key")
+        assert_equal "Welkom bij CodeHero.es", "welkom bij CodeHero.es".cp_case("Welcome at CodeHero.es")
+      end
+
+      test "upcase_first!" do
+        assert_equal    nil,     "".upcase_first!
+        assert_equal    nil, "Paul".upcase_first!
+        assert_equal "Paul", "paul".upcase_first!
       end
 
     end
