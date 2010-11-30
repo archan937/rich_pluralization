@@ -4,7 +4,7 @@ module Locales
   module NL
     class InflectionsTest < ActiveSupport::TestCase
 
-      context "A String instance in singular form" do
+      context "A String instance in Dutch singular form" do
         setup do
           I18n.locale = Engine.init :nl
         end

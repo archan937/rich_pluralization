@@ -5,15 +5,7 @@ module Core
     class InflectionsTest < ActiveSupport::TestCase
 
       context "A String instance" do
-        setup do
-          I18n.locale = Engine.init :nl
-        end
-
-        should "have the correct locale set" do
-          assert_equal I18n.locale, :nl
-        end
-
-        should "upcase the first character" do
+        should "upcase the first character only" do
           assert_equal ""         , ""         .upcase_first
           assert_equal "TeST"     , "teST"     .upcase_first
           assert_equal "Test"     , "test"     .upcase_first
