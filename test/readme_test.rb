@@ -12,15 +12,18 @@ class ReadmeTest < ActiveSupport::TestCase
     end
 
     should "return the expected values" do
-      [["Appendices", "Appendix"  ],
-       ["huizen"    , "huis"      ],
-       ["Huizen"    , "Huis"      ],
-       ["HUIZEN"    , "HUIS"      ],
-       ["Academici" , "Academicus"],
-       ["brieven"   , "brief"     ],
-       ["gebruikers", "gebruiker" ],
-       ["musea"     , :museum     ],
-       ["afspraken" , "afspraak"  ]].each do |(expectation, argument)|
+      [
+        ["Appendices", "Appendix"  ],
+        ["huizen"    , "huis"      ],
+        ["Huizen"    , "Huis"      ],
+        ["HUIZEN"    , "HUIS"      ],
+        ["Academici" , "Academicus"],
+        ["brieven"   , "brief"     ],
+        ["gebruikers", "gebruiker" ],
+        ["musea"     , :museum     ],
+        ["afspraken" , "afspraak"  ]
+      ].
+      each do |(expectation, argument)|
         assert_equal expectation, argument.pl
       end
     end
