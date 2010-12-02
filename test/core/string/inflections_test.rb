@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), "..", "..", "test_helper.rb")
+require File.expand_path("../../../test_helper.rb", __FILE__)
 
 module Core
   module String
@@ -8,11 +8,13 @@ module Core
         assert_equal      "",      "".upcase_first
         assert_equal "Value", "value".upcase_first
         assert_equal "VALUE", "vALUE".upcase_first
+        assert_equal "Value", "Value".upcase_first
       end
 
       test "cp_case" do
         assert_equal                  "VALUE",                  "value".cp_case("KEY")
         assert_equal                  "value",                  "VALUE".cp_case("key")
+        assert_equal                  "VAlUe",                  "vAlUe".cp_case("Key")
         assert_equal "Welkom bij CodeHero.es", "welkom bij CodeHero.es".cp_case("Welcome at CodeHero.es")
       end
 
