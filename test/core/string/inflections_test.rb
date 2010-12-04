@@ -24,6 +24,20 @@ module Core
         assert_equal "Paul", "paul".upcase_first!
       end
 
+      test "cp_case!" do
+        assert_equal    nil,     "".cp_case!("")
+        assert_equal    nil, "Paul".cp_case!("Engel")
+        assert_equal    nil, "PAUL".cp_case!("ENGEL")
+        assert_equal "Paul", "paul".cp_case!("Engel")
+        assert_equal "PAUL", "paul".cp_case!("ENGEL")
+      end
+
+      context "A String" do
+        should "respond to :pl" do
+          assert "".respond_to?(:pl)
+        end
+      end
+
     end
   end
 end
