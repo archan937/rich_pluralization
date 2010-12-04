@@ -1,4 +1,3 @@
-
 module Rich
   module Pluralization
     module Inflector

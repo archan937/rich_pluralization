@@ -1,4 +1,3 @@
-
-Dir[File.join(File.dirname(__FILE__), "core", "*.rb")].each do |file|
+Dir[File.expand_path "../core/*.rb", __FILE__].each do |file|
   require file
 end

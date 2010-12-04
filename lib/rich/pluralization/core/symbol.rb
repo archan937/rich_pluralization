@@ -1,4 +1,3 @@
-
 require "rich/pluralization/core/symbol/inflections"
 
 class Symbol

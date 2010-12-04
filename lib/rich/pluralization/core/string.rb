@@ -1,4 +1,3 @@
-
 require "rich/pluralization/core/string/inflections"
 
 class String

@@ -1,4 +1,3 @@
-
 module Rich
   module Pluralization
     module Engine
@@ -6,9 +5,9 @@ module Rich
 
       def init(test_locale = nil)
         if test_locale
-          I18n.load_path  =    [File.join(File.dirname(__FILE__), "..", "..", "..", "locales", "#{test_locale}.yml")]
+          I18n.load_path  =    [File.expand_path "../../../../locales/#{test_locale}.yml", __FILE__]
         else
-          I18n.load_path += Dir[File.join(File.dirname(__FILE__), "..", "..", "..", "locales", "*.yml")]
+          I18n.load_path += Dir[File.expand_path "../../../../locales/*.yml"             , __FILE__]
         end
 
         I18n.backend.reload!
