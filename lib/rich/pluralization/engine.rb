@@ -5,9 +5,9 @@ module Rich
 
       def init(test_locale = nil)
         if test_locale
-          I18n.load_path  =    [File.expand_path "../../../../locales/#{test_locale}.yml", __FILE__]
+          I18n.load_path  =    [File.expand_path("../../../../locales/#{test_locale}.yml", __FILE__)]
         else
-          I18n.load_path += Dir[File.expand_path "../../../../locales/*.yml"             , __FILE__]
+          I18n.load_path += Dir[File.expand_path("../../../../locales/*.yml"             , __FILE__)]
         end
 
         I18n.backend.reload!
