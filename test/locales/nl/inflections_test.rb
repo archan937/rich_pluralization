@@ -38,7 +38,7 @@ module Locales
           assert_equal I18n.locale, :nl
         end
 
-        should "not pluralize with a passed count restricts that" do
+        should "not pluralize with a passed count that restricts that" do
           assert_equal "vragen", "vraag".pl(0)
           assert_equal "vraag" , "vraag".pl(1)
           assert_equal "vragen", "vraag".pl(2)
