@@ -29,7 +29,7 @@ class EngineTest < ActiveSupport::TestCase
         end
 
         should "set the I18n load path to only contain the Rich-pluralization locale yml" do
-          assert_equal [File.expand_path "../../locales/nl.yml", __FILE__], I18n.load_path
+          assert_equal [File.expand_path("../../locales/nl.yml", __FILE__)], I18n.load_path
         end
       end
     end
