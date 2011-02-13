@@ -1,4 +1,5 @@
 require File.expand_path("../../../test_helper.rb", __FILE__)
+require "csv"
 
 module Locales
   module NL
