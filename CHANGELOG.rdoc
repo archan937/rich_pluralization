@@ -1,5 +1,9 @@
 = Rich-pluralization CHANGELOG
 
+== Version 1.0.7 (March xxx, 2011)
+
+* Dropped Jeweler
+
 == Version 1.0.6 (October 19, 2010)
 
 * Changed the i18n gem dependency to '>= 0.3.7'
