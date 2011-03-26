@@ -1,28 +1,13 @@
-require "rake"
+require "bundler"
+Bundler::GemHelper.install_tasks
+
 require "rake/testtask"
 require "rake/rdoctask"
-
-begin
-  require "jeweler"
-  Jeweler::Tasks.new do |gemspec|
-    gemspec.name        = "rich_pluralization"
-    gemspec.summary     = "Enrichments (e9s) module for localized pluralization"
-    gemspec.description = "Rich-pluralization is a module of E9s (http://github.com/archan937/e9s) which provides localized pluralization in combination with i18n. Doing this enables you to only translate words in singular form as the module pluralizes the translation for you."
-    gemspec.email       = "paul.engel@holder.nl"
-    gemspec.homepage    = "http://github.com/archan937/rich_pluralization"
-    gemspec.author      = "Paul Engel"
-
-    gemspec.add_dependency "i18n", ">= 0.3.7"
-  end
-  Jeweler::GemcutterTasks.new
-rescue LoadError
-  puts "Jeweler (or a dependency) not available. Install it with: gem install jeweler"
-end
 
 desc "Default: run unit tests."
 task :default => :test
 
-desc "Test the rich_pluralization plugin."
+desc "Test Rich-pluralization."
 Rake::TestTask.new(:test) do |t|
   t.libs    << "lib"
   t.libs    << "test"
@@ -30,7 +15,7 @@ Rake::TestTask.new(:test) do |t|
   t.verbose  = true
 end
 
-desc "Generate documentation for the rich_pluralization plugin."
+desc "Generate documentation for Rich-pluralization."
 Rake::RDocTask.new(:rdoc) do |rdoc|
   rdoc.rdoc_dir = "rdoc"
   rdoc.title    = "Rich-pluralization"
