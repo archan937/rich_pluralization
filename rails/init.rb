@@ -1,0 +1,1 @@
+require "rich_pluralization"

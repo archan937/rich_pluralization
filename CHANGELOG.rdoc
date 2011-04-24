@@ -1,8 +1,13 @@
 = Rich-pluralization CHANGELOG
 
-== Version 1.0.7 (March xxx, 2011)
+== Version 1.0.7 (April 23, 2011)
 
-* Dropped Jeweler
+* Using String inflections of Rich-Support
+* Added String.pl!
+* Made Rich-Pluralization a bit more legend: GemSuited up! ^^
+* Removed plugin related code
+* Using Bundler instead of Jeweler for gem publishing
+* Made Rich-pluralization Ruby 1.9.2 compatible
 
 == Version 1.0.6 (October 19, 2010)
 

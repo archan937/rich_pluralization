@@ -1,3 +1,5 @@
+require File.expand_path("../inflector/inflections.rb", __FILE__)
+
 module Rich
   module Pluralization
     module Inflector

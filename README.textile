@@ -191,6 +191,7 @@ i18n<br>
 h2. Contributors
 
 Wilco van Duinkerken - "@wvduinkerken":http://twitter.com/wvduinkerken - "http://holder.nl":http://holder.nl
+Michael Koper - "@michaelkoper":http://twitter.com/michaelkoper - "http://mokkol.waarbenjij.nu":http://mokkol.waarbenjij.nu
 
 h2. ToDo's
 
