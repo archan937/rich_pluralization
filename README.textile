@@ -34,7 +34,7 @@ Rich-pluralization preserves the casing in the pluralized result:
 
 h2. Installation
 
-h3. Using Rich-pluralization as gem in Rails 3
+h3. Using Rich-pluralization in Rails 3
 
 Add Rich-pluralization in @Gemfile@ as a gem dependency:
 
@@ -45,10 +45,10 @@ Add Rich-pluralization in @Gemfile@ as a gem dependency:
 Run the following in your console to install with Bundler:
 
 <pre>
-  sudo bundle install
+  bundle install
 </pre>
 
-h3. Using Rich-pluralization as gem in Rails 2
+h3. Using Rich-pluralization in Rails 2
 
 Add Rich-pluralization in @environment.rb@ as a gem dependency:
 
@@ -196,7 +196,6 @@ Michael Koper - "@michaelkoper":http://twitter.com/michaelkoper - "http://mokkol
 h2. ToDo's
 
 * Complete the Dutch (with WNT list) and Spanish inflections
-* Most String inflection methods are also defined in rich_i18n (keep it DRY)
 
 h2. Enrichments
 
