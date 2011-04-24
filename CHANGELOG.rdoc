@@ -8,6 +8,7 @@
 * Removed plugin related code
 * Using Bundler instead of Jeweler for gem publishing
 * Made Rich-pluralization Ruby 1.9.2 compatible
+* Using Rich::Support.after_initialize for configuring i18n
 
 == Version 1.0.6 (October 19, 2010)
 
