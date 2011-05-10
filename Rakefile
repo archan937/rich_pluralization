@@ -4,15 +4,12 @@ Bundler::GemHelper.install_tasks
 require "rake/testtask"
 require "rake/rdoctask"
 
-desc "Default: run tests."
+desc "Default: run unit tests."
 task :default => :test
 
 desc "Test Rich-pluralization."
-Rake::TestTask.new(:test) do |t|
-  t.libs    << "lib"
-  t.libs    << "test"
-  t.pattern  = "test/**/*_test.rb"
-  t.verbose  = true
+task :test do
+  system "suit test unit -v"
 end
 
 desc "Generate documentation for Rich-pluralization."

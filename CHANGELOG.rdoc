@@ -1,6 +1,6 @@
 = Rich-pluralization CHANGELOG
 
-== Version 1.0.7 (April 23, 2011)
+== Version 1.0.7 (May xx, 2011)
 
 * Using String inflections of Rich-Support
 * Added String.pl!
