@@ -8,6 +8,7 @@ module Rich
           Rich::Support.after_initialize do
             config_i18n test_locale
           end
+          test_locale
         end
 
       private

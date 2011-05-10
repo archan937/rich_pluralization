@@ -195,7 +195,6 @@ Michael Koper - "@michaelkoper":http://twitter.com/michaelkoper - "http://mokkol
 
 h2. ToDo's
 
-* Fix Rails 2 support
 * Complete the Dutch (with WNT list) and Spanish inflections
 
 h2. Enrichments

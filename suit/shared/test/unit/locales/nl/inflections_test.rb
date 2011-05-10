@@ -36,7 +36,7 @@ module Locales
         end
 
         should "have the correct locale set" do
-          assert_equal I18n.locale, :nl
+          assert_equal :nl, I18n.locale
         end
 
         should "not pluralize with a passed count that restricts that" do
