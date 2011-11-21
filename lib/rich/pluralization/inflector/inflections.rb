@@ -1,3 +1,4 @@
+require 'singleton'
 
 module Rich
   module Pluralization
