@@ -43,7 +43,7 @@ nl:
       - rule:          stad$
         replacement:   steden
 
-      - rule:          gave$
+      - rule:          (gave)$
         replacement:   \1n
       
       - rule:          abc, acme, acne, (a|ë|i|o|u|y)$
