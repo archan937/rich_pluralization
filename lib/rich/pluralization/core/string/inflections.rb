@@ -30,7 +30,7 @@ module Rich
           def pl(count = nil)
             Rich::Pluralization::Inflector.pluralize self, count
           end
-                
+
         end
       end
     end

@@ -6,22 +6,22 @@ es:
       - rule:          z$
         replacement:   ces
 
-      - rule:        | á([sn])$
+      - rule:          á([sn])$
         replacement:   a\1es
 
-      - rule:        | í([sn])$
+      - rule:          í([sn])$
         replacement:   i\1es
 
-      - rule:        | ó([sn])$
+      - rule:          ó([sn])$
         replacement:   o\1es
 
-      - rule:        | ú([sn])$
+      - rule:          ú([sn])$
         replacement:   u\1es
         
-      - rule:        | ([aeiou]s)$
+      - rule:          ([aeiou]s)$
         replacement:   \1
       
-      - rule:        | ([^aeioué])$
+      - rule:          ([^aeioué])$
         replacement:   \1es
         
       - rule:          $
