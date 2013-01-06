@@ -14,10 +14,14 @@ module Rich
       end
     
       def singularize(word)
+        return "" if word.blank?
+        
         in_english? ? word.singularize.cp_case(word) : inflect(:singulars, word)
       end
     
       def pluralize(word, count = nil)
+        return "" if word.blank?
+        
         count == 1 ? singularize(word) : (in_english? ? word.pluralize.cp_case(word) : inflect(:plurals, word))
       end
     
