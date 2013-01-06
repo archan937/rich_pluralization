@@ -14,6 +14,8 @@ module Rich
       end
     
       def singularize(word)
+        return "" if word.blank?
+        
         in_english? ? word.singularize.cp_case(word) : inflect(:singulars, word)
       end
     
